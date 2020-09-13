@@ -15,8 +15,8 @@ This is a toy app for vanilla javascript practice.
 - [v] Delete task
 - [v] Edit task
 - [v] Save tasks to Local Storage
+- [v] Hosting App
 - [-] Change task order
 - [-] Mark completed task
-- [-] Hosting App
 - [-] Add Multiple Language Settings
 - [-] Add Responsive UI for Mobile
