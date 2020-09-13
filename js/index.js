@@ -34,15 +34,9 @@ window.addEventListener("load", function () {
             var taskRemoveBtn = genBTN();
             var id = new Date().getTime().toString();
 
-            li.setAttribute("class", "task-list__item");
-            li.setAttribute("id", id);
-            taskTitle.setAttribute("class", "task-list__item__title");
-            li.appendChild(taskTitle);
-            li.appendChild(taskRemoveBtn);
-            taskTitle.appendChild(taskText);
-            taskList.appendChild(li);
+            taskList.appendChild(createTask(inputText, id));
             updateLocalStorage(id, inputText)
-            input.value = "";
+            input.value = ""; // initialize input form
         }
     })
 
@@ -89,9 +83,9 @@ window.addEventListener("load", function () {
         updateCancelBtn.value = "Cancel";
 
         updateForm.setAttribute("class", "task-list__item__update-form");
-        updateInput.setAttribute("class", "task-list__item__update-form__input");
-        updateConfirmBtn.setAttribute("class", "task-list__item__update-form__confirm-btn");
-        updateCancelBtn.setAttribute("class", "task-list__item__update-form__cancel-btn");
+        updateInput.setAttribute("class", "input task-list__item__update-form__input");
+        updateConfirmBtn.setAttribute("class", "btn task-list__item__update-form__confirm-btn");
+        updateCancelBtn.setAttribute("class", "btn task-list__item__update-form__cancel-btn");
 
         updateForm.appendChild(updateInput);
         updateForm.appendChild(updateConfirmBtn);
@@ -119,9 +113,9 @@ window.addEventListener("load", function () {
         var updateBtn = document.createElement('i');
         var removeBtn = document.createElement('i');
 
-        btnContainer.setAttribute("class", "task-list__item__btn")
-        updateBtn.setAttribute("class", "task-list__item__btn__update fas fa-edit")
-        removeBtn.setAttribute("class", "task-list__item__btn__remove fas fa-trash-alt")
+        btnContainer.setAttribute("class", "task-list__item__container")
+        updateBtn.setAttribute("class", "task-list__item__btn task-list__item__btn__update fas fa-edit")
+        removeBtn.setAttribute("class", "task-list__item__btn task-list__item__btn__remove fas fa-trash-alt")
         updateBtn.addEventListener("click", updateTask)
         removeBtn.addEventListener("click", removeTask)
         btnContainer.appendChild(updateBtn);
