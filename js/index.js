@@ -62,7 +62,6 @@ window.addEventListener("load", function () {
         li.appendChild(taskRemoveBtn);
         taskTitle.appendChild(taskText);
         return li;
-        // taskList.appendChild(li);
     }
 
     // Button Control
@@ -88,6 +87,11 @@ window.addEventListener("load", function () {
         updateConfirmBtn.value = "Enter";
         updateCancelBtn.type = "button";
         updateCancelBtn.value = "Cancel";
+
+        updateForm.setAttribute("class", "task-list__item__update-form");
+        updateInput.setAttribute("class", "task-list__item__update-form__input");
+        updateConfirmBtn.setAttribute("class", "task-list__item__update-form__confirm-btn");
+        updateCancelBtn.setAttribute("class", "task-list__item__update-form__cancel-btn");
 
         updateForm.appendChild(updateInput);
         updateForm.appendChild(updateConfirmBtn);
