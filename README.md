@@ -19,3 +19,4 @@ This is a toy app for vanilla javascript practice.
 - [-] Mark completed task
 - [-] Hosting App
 - [-] Add Multiple Language Settings
+- [-] Add Responsive UI for Mobile
