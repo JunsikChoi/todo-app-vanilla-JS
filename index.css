@@ -1,10 +1,10 @@
 body{
-    background-color: rgba(0,0,0,0.1);
+    background-color: #f6f7d4;
 }
 
 .container{
     position: absolute;
-    background-color: white;
+    background-color: #99f3bd;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -13,8 +13,55 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 10px 10px 5px  rgba(0,0,0,0.6);
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.6);
     border-radius: 25px;
+}
+
+.title-text {
+    color: rgba(255, 255, 255, 0.98);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-shadow: #28df99 2px 2px;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    background-color: #28df99;
+    color: #fff;
+    padding: 15px 0;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 2px;
+    box-shadow: #198a5f 2px 2px;
+}
+
+.input {
+    background-color: #d2f6c5;
+    border: none;
+    border-radius: 10px;
+}
+
+.input:focus {
+    color: #28df99;
+    font-size: 15px;
+    /* text-transform: uppercase; */
+    text-align: center;
+    font-weight: 800;
+    border: 5px solid #28df99;
+    outline: none;
+}
+
+.input::placeholder{
+    color: #28df99;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
 }
 
 .title{
@@ -47,10 +94,6 @@ body{
     box-sizing: border-box;
 }
 
-.task-title {
-
-}
-
 .task-list {
     list-style-type: none;
     width:100%;
@@ -71,24 +114,58 @@ body{
 
 .task-list__item__title {
     /* margin-right: 10px; */
+    background-color: #d2f6c5;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 0 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    color: #364b4a;
 }
 
-.task-list__item__btn{
+.task-list__item__container{
     display: flex;
     justify-content: space-around;
     width: 50px;
 }
+.task-list__item__btn{
+    font-size: 25px;
+    color: #364b4a;
+    margin: 3px;
+}
 .task-list__item__btn__update {
-    font-size: 20px;
 }
 .task-list__item__btn__update:hover {
-    font-size: 20px;
     color: blue;
 }
-.task-list__item__btn__remove {
-    font-size: 20px;
-}
 .task-list__item__btn__remove:hover {
-    font-size: 20px;
     color: red;
+}
+
+.task-list__item__update-form {
+    box-sizing: border-box;
+    width: 400px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+}
+
+.task-list__item__update-form__input {
+    width: 200px;
+    height: auto;
+    line-height: normal;
+    padding: .8em .5em;
+    margin-right: 10px;
+}
+
+.task-list__item__update-form__confirm-btn {
+    width: 80px;
+    /* background-color: #28df99 */
+}
+
+.task-list__item__update-form__cancel-btn {
+    width: 80px;
+    
 }
