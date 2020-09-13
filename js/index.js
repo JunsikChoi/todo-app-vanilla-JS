@@ -95,8 +95,12 @@ window.addEventListener("load", function () {
         updateForm.addEventListener('submit', function (e) {
             e.preventDefault();
             const inputText = updateInput.value;
-            updateLocalStorage(id, inputText);
-            updateForm.parentNode.replaceChild(createTask(inputText, id), updateForm);
+            if (inputText.length == 0) {
+                alert("Type Something!");
+            } else {
+                updateLocalStorage(id, inputText);
+                updateForm.parentNode.replaceChild(createTask(inputText, id), updateForm);
+            }
         });
 
         updateCancelBtn.addEventListener('click', function (e) {
